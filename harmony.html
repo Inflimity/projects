@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Digital Studio | The Architecture of Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: crosshair;
+        }
+
+        .splide__slide img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px #2563eb;
+            color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .splide__slide img {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black selection:bg-blue-600 selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 mix-blend-difference px-8 py-8 flex justify-between items-center">
+        <div class="text-white text-2xl font-black uppercase tracking-tighter">Harmony.</div>
+        <div class="flex space-x-6">
+            <div class="w-8 h-[2px] bg-white"></div>
+            <div class="w-4 h-[2px] bg-white"></div>
+        </div>
+    </nav>
+
+    <section class="splide" id="hero-carousel">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                        alt="Modern Villa">
+                    <div class="absolute inset-0 bg-black/20 flex flex-col justify-end p-8 md:p-20">
+                        <h2
+                            class="text-white text-6xl md:text-[10vw] font-black uppercase leading-none tracking-tighter">
+                            Spatial<br>Purity.</h2>
+                    </div>
+                </li>
+                <li class="splide__slide relative">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                        alt="Skyscraper">
+                    <div class="absolute inset-0 bg-black/20 flex flex-col justify-end p-8 md:p-20">
+                        <h2
+                            class="text-white text-6xl md:text-[10vw] font-black uppercase leading-none tracking-tighter">
+                            Urban<br><span class="text-outline">Soul.</span></h2>
+                    </div>
+                </li>
+                <li class="splide__slide relative">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop"
+                        alt="Interior">
+                    <div class="absolute inset-0 bg-black/20 flex flex-col justify-end p-8 md:p-20">
+                        <h2
+                            class="text-white text-6xl md:text-[10vw] font-black uppercase leading-none tracking-tighter">
+                            Digital<br>Craft.</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-20 border-b-2 border-black">
+        <div>
+            <p class="text-xs font-bold uppercase tracking-[0.4em] mb-12 text-blue-600">Our Philosophy</p>
+            <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9]">Designing for
+                the<br>Top 1%.</h3>
+        </div>
+        <div class="flex flex-col justify-end">
+            <p class="text-xl md:text-2xl font-medium leading-relaxed mb-8">
+                Harmony Digital Studio isn’t just an architecture firm. We are a synthesis of **computational
+                precision** and **artistic intuition**. Based in Lagos, we build for the global visionary.
+            </p>
+            <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=1920&auto=format&fit=crop"
+                class="w-full grayscale hover:grayscale-0 transition-all duration-700" alt="Process">
+        </div>
+    </section>
+
+    <section class="py-20 px-8 md:px-20">
+        <div class="flex justify-between items-end mb-16">
+            <h4 class="text-4xl font-black uppercase tracking-tighter">The Works</h4>
+            <span class="text-[10px] font-bold uppercase tracking-widest">[ 2024-2026 ]</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-8 group">
+                <div class="overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                        class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="flex justify-between uppercase font-bold text-xs tracking-widest">
+                    <span>Corporate Headquarters / Ikoyi</span>
+                    <span class="text-blue-600 underline">View Case</span>
+                </div>
+            </div>
+            <div class="md:col-span-4 group flex flex-col justify-center">
+                <div class="overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop"
+                        class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="flex justify-between uppercase font-bold text-xs tracking-widest">
+                    <span>Lekki Residence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black text-white py-32 px-8 md:px-20">
+        <h5 class="text-6xl md:text-[8vw] font-black uppercase tracking-tighter mb-20 text-center">Expertise<span
+                class="text-blue-600">.</span></h5>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-0 border-t border-l border-white/20">
+            <div
+                class="p-10 border-r border-b border-white/20 hover:bg-blue-600 transition-colors cursor-pointer group">
+                <h6 class="text-sm font-bold uppercase tracking-widest mb-20 opacity-40">01</h6>
+                <p class="text-2xl font-black uppercase leading-none">Planning</p>
+            </div>
+            <div
+                class="p-10 border-r border-b border-white/20 hover:bg-blue-600 transition-colors cursor-pointer group">
+                <h6 class="text-sm font-bold uppercase tracking-widest mb-20 opacity-40">02</h6>
+                <p class="text-2xl font-black uppercase leading-none">Interior</p>
+            </div>
+            <div
+                class="p-10 border-r border-b border-white/20 hover:bg-blue-600 transition-colors cursor-pointer group">
+                <h6 class="text-sm font-bold uppercase tracking-widest mb-20 opacity-40">03</h6>
+                <p class="text-2xl font-black uppercase leading-none">3D BIM</p>
+            </div>
+            <div
+                class="p-10 border-r border-b border-white/20 hover:bg-blue-600 transition-colors cursor-pointer group">
+                <h6 class="text-sm font-bold uppercase tracking-widest mb-20 opacity-40">04</h6>
+                <p class="text-2xl font-black uppercase leading-none">V-Tour</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-32 px-8 md:px-20 flex flex-col md:flex-row justify-between items-start gap-20">
+        <div class="max-w-xl">
+            <h2 class="text-6xl font-black uppercase tracking-tighter mb-10 leading-none italic">Let’s build<br>the
+                future.</h2>
+            <p class="text-slate-400 uppercase text-xs font-bold tracking-[0.3em]">Harmony Digital Studio — Ikate, Lagos
+            </p>
+        </div>
+        <div class="flex flex-col space-y-8 w-full md:w-auto">
+            <a href="#"
+                class="text-4xl md:text-6xl font-black tracking-tighter hover:text-blue-600 transition">Instagram</a>
+            <a href="mailto:hello@harmony.studio"
+                class="text-4xl md:text-6xl font-black tracking-tighter hover:text-blue-600 transition">Email.</a>
+            <a href="https://wa.me/23400000000"
+                class="bg-blue-600 text-white text-center py-8 px-20 font-black uppercase tracking-[0.2em] text-sm hover:bg-black transition">Start
+                Project</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#hero-carousel', {
+                type: 'fade',
+                rewind: true,
+                autoplay: true,
+                interval: 4000,
+                arrows: false,
+                pagination: true,
+                speed: 1000,
+            }).mount();
+        });
+    </script>
+</body>
+
+</html>
