@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Luxury Estates</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --accent: #c9a227;
+            --bg: #f5f5f5;
+            --surface: #ffffff;
+            --text: #2d3436;
+            --text-light: #636e72;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        nav {
+            background-color: var(--surface);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .page-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .story-content h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .story-content p {
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .values-section {
+            background-color: var(--surface);
+            padding: 4rem 2rem;
+            margin: 0 -2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .value-card {
+            padding: 2rem;
+            border: 2px solid var(--bg);
+            border-radius: 8px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-section {
+            margin-top: 6rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            background-color: var(--surface);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 250px;
+            background-color: var(--bg);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-role {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #b2bec3;
+            padding: 3rem 2rem 1rem;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            display: block;
+            color: #b2bec3;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .story-section,
+            .values-grid,
+            .team-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">LUXURY<span>ESTATES</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>About Luxury Estates</h1>
+        <p>Reimagining real estate with trust, transparency, and exceptional service</p>
+    </div>
+
+    <div class="container">
+        <div class="story-section">
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>Founded in 2009, Luxury Estates began with a simple mission: to transform the real estate experience
+                    by putting clients first. What started as a small boutique agency has grown into one of the most
+                    trusted names in luxury real estate.</p>
+                <p>Our team of dedicated professionals combines deep market knowledge with innovative marketing
+                    strategies, ensuring that whether you're buying or selling, you receive unparalleled service and
+                    results that exceed expectations.</p>
+                <p>We believe that real estate is more than transactions—it's about building relationships and helping
+                    people find their place in the world.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+                    alt="Our Office">
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <div class="value-title">Integrity First</div>
+                    <p>We believe in honest communication and transparent dealings in every transaction.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <div class="value-title">Innovation</div>
+                    <p>Leveraging cutting-edge technology to provide the best real estate experience.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <div class="value-title">Excellence</div>
+                    <p>Commitment to exceptional service and attention to every detail.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>Expert agents dedicated to finding your perfect property</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo"></div>
+                    <div class="team-name">Alexandra Chen</div>
+                    <div class="team-role">CEO & Founder</div>
+                    <div class="social-links">
+                        <a href="#">in</a>
+                        <a href="#">@</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"></div>
+                    <div class="team-name">Marcus Johnson</div>
+                    <div class="team-role">Head of Sales</div>
+                    <div class="social-links">
+                        <a href="#">in</a>
+                        <a href="#">@</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"></div>
+                    <div class="team-name">Sarah Williams</div>
+                    <div class="team-role">Senior Agent</div>
+                    <div class="social-links">
+                        <a href="#">in</a>
+                        <a href="#">@</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"></div>
+                    <div class="team-name">David Park</div>
+                    <div class="team-role">Marketing Director</div>
+                    <div class="social-links">
+                        <a href="#">in</a>
+                        <a href="#">@</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Luxury Estates</h4>
+                <p>Your trusted partner in finding premium real estate.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Get in Touch</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
